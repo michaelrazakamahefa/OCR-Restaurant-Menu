@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Données extraites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Données extraites</h1>
+    <table id="table-content">
+        <thead>
+            <tr>
+                <th>Prix (Ar)</th>
+                <th>Observations</th>
+            </tr>
+        </thead>
+        <tbody id="priceTableBody"></tbody>
+    </table>
+    <p>URL :</p>
+    <p id="url"></p>
+
+    <script src="data.js"></script>
+    <script>
+        var priceTableBody = document.getElementById("priceTableBody");
+        var urlElement = document.getElementById("url");
+
+        if (extractedData) {
+            // Définition des seuils de prix
+            var seuilBas = 5000;
+            var seuilMoyen = 15000;
+
+            // Boucle à travers les prix et ajoute-les à la table
+            extractedData.prices.forEach(function (price) {
+                var observation = "";
+                var observationClass = "";
+
+                if (price < seuilBas) {
+                    observation = "Bon marché";
+                    observationClass = "observation-bon-marche";
+                } else if (price >= seuilBas && price <= seuilMoyen) {
+                    observation = "Abordable";
+                    observationClass = "observation-abordable";
+                } else {
+                    observation = "Cher";
+                    observationClass = "observation-cher";
+                }
+
+                var row = document.createElement("tr");
+                var priceCell = document.createElement("td");
+                var observationCell = document.createElement("td");
+
+                priceCell.textContent = price + " Ar";
+                observationCell.textContent = observation;
+                observationCell.className = observationClass;  // Ajoute la classe d'observation
+
+                row.appendChild(priceCell);
+                row.appendChild(observationCell);
+
+                priceTableBody.appendChild(row);
+            });
+
+            // Afficher l'URL
+            urlElement.textContent = extractedData.url;
+        }
+    </script>
+</body>
+</html>

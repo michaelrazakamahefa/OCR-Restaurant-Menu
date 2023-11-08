@@ -1,0 +1,1 @@
+var extractedData = {"prices": [15000.0, 13000.0, 5000.0, 9000.0], "url": ""};

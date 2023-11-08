@@ -1,0 +1,1 @@
+var extractedData = {"prices": [1000.0, 5000.0, 9000.0, 12000.0, 17000.0, 19000.0, 25000.0], "url": "https://www.chezarnaud.com"};

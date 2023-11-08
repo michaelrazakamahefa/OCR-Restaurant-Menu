@@ -1,0 +1,93 @@
+/* styles.css */
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+table th, table td {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+th {
+    background-color: #ccc;
+}
+
+.observation-bon-marche {
+    color: green;
+}
+
+.observation-abordable {
+    color: blue;
+}
+
+.observation-cher {
+    color: red;
+}
+/* Styles généraux pour la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+/* Styles pour la table de prix */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Styles pour les observations */
+.observation-bon-marche {
+    color: green;
+}
+
+.observation-abordable {
+    color: blue;
+}
+
+.observation-cher {
+    color: red;
+}
+
+/* Styles pour l'URL */
+#url {
+    font-weight: bold;
+    color: #3366cc;
+    margin-top: 20px;
+}
+
+/* Styles pour les liens dans le texte */
+a {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
